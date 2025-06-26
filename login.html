@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - Gazze Dijital Platformu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="flag-logo">
+                    <div class="flag-stripe black"></div>
+                    <div class="flag-stripe white"></div>
+                    <div class="flag-stripe green"></div>
+                    <div class="flag-triangle red"></div>
+                </div>
+                <h2>Gazze Dijital Platformu</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="services.html">Hizmetler</a>
+                <a href="index.html#about">Hakkımızda</a>
+                <a href="index.html#contact">İletişim</a>
+                <a href="register.html" class="btn-register">Kayıt Ol</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Form -->
+    <div class="form-container">
+        <div class="flag-logo" style="margin: 0 auto 20px; width: 60px; height: 45px;">
+            <div class="flag-stripe black"></div>
+            <div class="flag-stripe white"></div>
+            <div class="flag-stripe green"></div>
+            <div class="flag-triangle red"></div>
+        </div>
+        
+        <h2>Platforma Giriş Yap</h2>
+        
+        <form id="loginForm" method="POST">
+            <div class="form-group">
+                <label for="email">
+                    <i class="fas fa-envelope"></i> E-posta Adresi
+                </label>
+                <input type="email" id="email" name="email" required placeholder="ornek@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">
+                    <i class="fas fa-lock"></i> Şifre
+                </label>
+                <input type="password" id="password" name="password" required placeholder="Şifrenizi girin">
+            </div>
+            
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="remember"> Beni Hatırla
+                </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                <i class="fas fa-sign-in-alt"></i> Giriş Yap
+            </button>
+        </form>
+        
+        <div style="text-align: center;">
+            <p><a href="forgot-password.html" style="color: var(--palestinian-red);">Şifremi Unuttum</a></p>
+            <p style="margin-top: 1rem;">Hesabınız yok mu? <a href="register.html" style="color: var(--palestinian-green);">Kayıt Ol</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="flag-logo">
+                        <div class="flag-stripe black"></div>
+                        <div class="flag-stripe white"></div>
+                        <div class="flag-stripe green"></div>
+                        <div class="flag-triangle red"></div>
+                    </div>
+                    <h3>Gazze Dijital Platformu</h3>
+                    <p>Filistin gençliğini dijital dünyada güçlendirmek için buradayız.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="services.html">Hizmetler</a></li>
+                        <li><a href="register.html">Kayıt Ol</a></li>
+                        <li><a href="admin.html">Admin Paneli</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Destek</h4>
+                    <ul>
+                        <li><a href="#">Yardım Merkezi</a></li>
+                        <li><a href="#">SSS</a></li>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gazze Dijital Platformu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Demo için basit kontrol
+            if(email === 'admin@gazze.com' && password === 'admin123') {
+                alert('Admin olarak giriş yapıldı!');
+                window.location.href = 'admin.html';
+            } else if(email && password) {
+                alert('Giriş başarılı!');
+                window.location.href = 'profile.html';
+            } else {
+                alert('Lütfen tüm alanları doldurun!');
+            }
+        });
+    </script>
+</body>
+</html> 

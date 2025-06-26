@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol - Gazze Dijital Platformu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="flag-logo">
+                    <div class="flag-stripe black"></div>
+                    <div class="flag-stripe white"></div>
+                    <div class="flag-stripe green"></div>
+                    <div class="flag-triangle red"></div>
+                </div>
+                <h2>Gazze Dijital Platformu</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="services.html">Hizmetler</a>
+                <a href="index.html#about">Hakkımızda</a>
+                <a href="index.html#contact">İletişim</a>
+                <a href="login.html" class="btn-login">Giriş Yap</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Registration Form -->
+    <div class="form-container" style="max-width: 600px; margin: 120px auto 40px;">
+        <div class="flag-logo" style="margin: 0 auto 20px; width: 60px; height: 45px;">
+            <div class="flag-stripe black"></div>
+            <div class="flag-stripe white"></div>
+            <div class="flag-stripe green"></div>
+            <div class="flag-triangle red"></div>
+        </div>
+        
+        <h2>Platforma Kayıt Ol</h2>
+        <p style="text-align: center; color: var(--palestinian-red); margin-bottom: 2rem;">
+            <i class="fas fa-info-circle"></i> 
+            Bu platform yalnızca Gazze Şeridi sakinleri için özeldir
+        </p>
+        
+        <form id="registerForm" method="POST">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                    <label for="firstName">
+                        <i class="fas fa-user"></i> Ad
+                    </label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="Adınız">
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">
+                        <i class="fas fa-user"></i> Soyad
+                    </label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="Soyadınız">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">
+                    <i class="fas fa-envelope"></i> E-posta Adresi
+                </label>
+                <input type="email" id="email" name="email" required placeholder="ornek@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">
+                    <i class="fas fa-phone"></i> Telefon Numarası
+                </label>
+                <input type="tel" id="phone" name="phone" required placeholder="+970 XX XXX XXXX">
+            </div>
+            
+            <div class="form-group">
+                <label for="birthDate">
+                    <i class="fas fa-calendar"></i> Doğum Tarihi
+                </label>
+                <input type="date" id="birthDate" name="birthDate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">
+                    <i class="fas fa-map-marker-alt"></i> Gazze'deki Adresiniz
+                </label>
+                <input type="text" id="address" name="address" required placeholder="Mahalle, sokak bilgileri">
+            </div>
+            
+            <div class="form-group">
+                <label for="idNumber">
+                    <i class="fas fa-id-card"></i> Kimlik Numarası (Filistin Kimlik)
+                </label>
+                <input type="text" id="idNumber" name="idNumber" required placeholder="9 haneli kimlik numarası">
+            </div>
+            
+            <div class="form-group">
+                <label for="profession">
+                    <i class="fas fa-briefcase"></i> Meslek/Uzmanlık Alanı
+                </label>
+                <select id="profession" name="profession" required>
+                    <option value="">Seçiniz...</option>
+                    <option value="programming">Programlama</option>
+                    <option value="design">Grafik Tasarım</option>
+                    <option value="writing">İçerik Yazarlığı</option>
+                    <option value="translation">Çeviri</option>
+                    <option value="marketing">Dijital Pazarlama</option>
+                    <option value="data">Veri Analizi</option>
+                    <option value="photography">Fotoğrafçılık</option>
+                    <option value="video">Video Editing</option>
+                    <option value="education">Eğitim</option>
+                    <option value="other">Diğer</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="experience">
+                    <i class="fas fa-chart-line"></i> Deneyim Seviyesi
+                </label>
+                <select id="experience" name="experience" required>
+                    <option value="">Seçiniz...</option>
+                    <option value="beginner">Başlangıç (0-1 yıl)</option>
+                    <option value="intermediate">Orta (1-3 yıl)</option>
+                    <option value="advanced">İleri (3-5 yıl)</option>
+                    <option value="expert">Uzman (5+ yıl)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="skills">
+                    <i class="fas fa-tools"></i> Becerileriniz
+                </label>
+                <textarea id="skills" name="skills" rows="3" placeholder="Sahip olduğunuz becerileri yazın (örn: HTML, CSS, JavaScript, Photoshop...)"></textarea>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i> Şifre
+                    </label>
+                    <input type="password" id="password" name="password" required placeholder="En az 8 karakter">
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">
+                        <i class="fas fa-lock"></i> Şifre Tekrar
+                    </label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Şifreyi tekrar girin">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="terms" required> 
+                    <a href="#" style="color: var(--palestinian-green);">Kullanım Şartları</a> ve 
+                    <a href="#" style="color: var(--palestinian-green);">Gizlilik Politikası</a>'nı okudum ve kabul ediyorum
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="verification" required> 
+                    Verdiğim bilgilerin doğru olduğunu ve kimlik doğrulama sürecine katılmayı kabul ediyorum
+                </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                <i class="fas fa-user-plus"></i> Kayıt Ol
+            </button>
+        </form>
+        
+        <div style="text-align: center;">
+            <p>Zaten hesabınız var mı? <a href="login.html" style="color: var(--palestinian-green);">Giriş Yap</a></p>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 1rem; border-radius: 5px; margin-top: 2rem;">
+            <h4 style="color: var(--palestinian-red); margin-bottom: 1rem;">
+                <i class="fas fa-exclamation-triangle"></i> Kimlik Doğrulama Süreci
+            </h4>
+            <p style="font-size: 0.9rem; color: var(--text-light);">
+                Kayıt işleminiz tamamlandıktan sonra, Gazze Şeridi'nde yaşadığınızı doğrulamak için 
+                kimlik belgelerinizi inceleyeceğiz. Bu süreç 1-3 iş günü sürebilir. 
+                Onaylandıktan sonra platform özelliklerini kullanmaya başlayabileceksiniz.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="flag-logo">
+                        <div class="flag-stripe black"></div>
+                        <div class="flag-stripe white"></div>
+                        <div class="flag-stripe green"></div>
+                        <div class="flag-triangle red"></div>
+                    </div>
+                    <h3>Gazze Dijital Platformu</h3>
+                    <p>Filistin gençliğini dijital dünyada güçlendirmek için buradayız.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="services.html">Hizmetler</a></li>
+                        <li><a href="login.html">Giriş Yap</a></li>
+                        <li><a href="admin.html">Admin Paneli</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Destek</h4>
+                    <ul>
+                        <li><a href="#">Yardım Merkezi</a></li>
+                        <li><a href="#">SSS</a></li>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gazze Dijital Platformu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Şifreler eşleşmiyor!');
+                return;
+            }
+            
+            if (password.length < 8) {
+                alert('Şifre en az 8 karakter olmalıdır!');
+                return;
+            }
+            
+            // Form verilerini topla
+            const formData = new FormData(this);
+            
+            alert('Kayıt başarılı! Kimlik doğrulama için beklemede...');
+            window.location.href = 'login.html';
+        });
+
+        // Telefon formatı kontrol
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.startsWith('970')) {
+                value = '+' + value;
+            } else if (value.startsWith('0')) {
+                value = '+970' + value.substring(1);
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html> 

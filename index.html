@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaza Digital Platform - Empowering Gaza Youth</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="languages.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="flag-logo">
+                    <div class="flag-stripe black"></div>
+                    <div class="flag-stripe white"></div>
+                    <div class="flag-stripe green"></div>
+                    <div class="flag-triangle red"></div>
+                </div>
+                <h2 data-translate="site_title">Gaza Digital Platform</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" data-translate="nav_home">Home</a>
+                <a href="services.html" data-translate="nav_services">Services</a>
+                <a href="#about" data-translate="nav_about">About Us</a>
+                <a href="#contact" data-translate="nav_contact">Contact</a>
+                <a href="login.html" class="btn-login" data-translate="nav_login">Login</a>
+                <a href="register.html" class="btn-register" data-translate="nav_register">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-translate="hero_title">Digital Empowerment Platform for Gaza Youth</h1>
+            <p data-translate="hero_subtitle">A platform specially designed for freelancing and professional development. Connecting Gaza's talents to the world.</p>
+            <div class="hero-buttons">
+                <a href="register.html" class="btn btn-primary" data-translate="hero_get_started">Get Started</a>
+                <a href="#features" class="btn btn-secondary" data-translate="hero_features">Features</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <i class="fas fa-laptop-code"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 data-translate="features_title">Platform Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3 data-translate="feature_freelance_title">Freelancing</h3>
+                    <p data-translate="feature_freelance_desc">Showcase your skills to global clients and earn income</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3 data-translate="feature_education_title">Free Education</h3>
+                    <p data-translate="feature_education_desc">Learn coding, design, and business management from experts</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3 data-translate="feature_community_title">Community</h3>
+                    <p data-translate="feature_community_desc">Connect with other talents in Gaza and grow together</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3 data-translate="feature_security_title">Secure Platform</h3>
+                    <p data-translate="feature_security_desc">Identity verification platform exclusive to Gaza residents</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-translate="about_title">Our Mission</h2>
+                    <p data-translate="about_desc">We are a special platform designed to provide economic alternatives to young people in the Gaza Strip despite the blockade and empower them with digital skills.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <span data-translate="about_point1">Income source for 500+ youth in the first year</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="about_point2">Free training for 1000+ participants</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="about_point3">International client network</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="about_point4">Development with expert mentors</span></li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p data-translate="about_stat1">Target Users</p>
+                    </div>
+                    <div class="stat">
+                        <h3>1000+</h3>
+                        <p data-translate="about_stat2">Training Participants</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p data-translate="about_stat3">Platform Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-translate="contact_title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-translate="contact_info_title">Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@gazzeplatform.org</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+90 XXX XXX XX XX</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-translate="contact_location">Gaza Strip, Palestine</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" data-translate="contact_name" placeholder="Your Name" required>
+                    <input type="email" data-translate="contact_email" placeholder="Your Email Address" required>
+                    <textarea data-translate="contact_message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary" data-translate="contact_send">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="flag-logo">
+                        <div class="flag-stripe black"></div>
+                        <div class="flag-stripe white"></div>
+                        <div class="flag-stripe green"></div>
+                        <div class="flag-triangle red"></div>
+                    </div>
+                    <h3 data-translate="site_title">Gaza Digital Platform</h3>
+                    <p data-translate="footer_desc">We are here to empower Palestinian youth in the digital world.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer_quick_links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-translate="nav_home">Home</a></li>
+                        <li><a href="services.html" data-translate="nav_services">Services</a></li>
+                        <li><a href="register.html" data-translate="nav_register">Register</a></li>
+                        <li><a href="login.html" data-translate="nav_login">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer_support">Support</h4>
+                    <ul>
+                        <li><a href="#" data-translate="footer_help">Help Center</a></li>
+                        <li><a href="#" data-translate="footer_faq">FAQ</a></li>
+                        <li><a href="#" data-translate="footer_privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-translate="footer_terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2024 Gaza Digital Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
