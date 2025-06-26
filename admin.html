@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli - Gazze Dijital Platformu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div class="flag-logo">
+                        <div class="flag-stripe black"></div>
+                        <div class="flag-stripe white"></div>
+                        <div class="flag-stripe green"></div>
+                        <div class="flag-triangle red"></div>
+                    </div>
+                    <h2>Admin Kontrol Paneli</h2>
+                </div>
+                <div>
+                    <span style="margin-left: 1rem;">Hoş geldiniz, Admin</span>
+                    <a href="index.html" class="btn btn-secondary" style="color: white; border-color: white;">
+                        <i class="fas fa-sign-out-alt"></i> Çıkış
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Content -->
+    <div class="admin-content">
+        <div class="container">
+            <!-- Statistics -->
+            <div class="admin-stats">
+                <div class="admin-stat">
+                    <h3>42</h3>
+                    <p>Bekleyen Başvuru</p>
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="admin-stat">
+                    <h3>128</h3>
+                    <p>Onaylanmış Kullanıcı</p>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="admin-stat">
+                    <h3>15</h3>
+                    <p>Reddedilen Başvuru</p>
+                    <i class="fas fa-times-circle"></i>
+                </div>
+                <div class="admin-stat">
+                    <h3>185</h3>
+                    <p>Toplam Başvuru</p>
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+
+            <!-- Pending Applications -->
+            <div class="admin-card">
+                <h3 style="color: var(--palestinian-red); margin-bottom: 1.5rem;">
+                    <i class="fas fa-user-check"></i> Kimlik Doğrulama Bekleyen Başvurular
+                </h3>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Ad Soyad</th>
+                                <th>E-posta</th>
+                                <th>Telefon</th>
+                                <th>Kimlik No</th>
+                                <th>Adres</th>
+                                <th>Meslek</th>
+                                <th>Başvuru Tarihi</th>
+                                <th>Durum</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Ahmed Hassan</td>
+                                <td>ahmed@example.com</td>
+                                <td>+970 59 123 4567</td>
+                                <td>123456789</td>
+                                <td>Gaza Şehri, Rimal</td>
+                                <td>Programlama</td>
+                                <td>15.12.2024</td>
+                                <td><span class="status-pending">Beklemede</span></td>
+                                <td>
+                                    <button class="btn btn-primary" style="margin: 2px; padding: 5px 10px;" onclick="approveUser(1)">
+                                        <i class="fas fa-check"></i> Onayla
+                                    </button>
+                                    <button class="btn" style="background: var(--palestinian-red); color: white; margin: 2px; padding: 5px 10px;" onclick="rejectUser(1)">
+                                        <i class="fas fa-times"></i> Reddet
+                                    </button>
+                                    <button class="btn btn-secondary" style="margin: 2px; padding: 5px 10px;" onclick="viewDetails(1)">
+                                        <i class="fas fa-eye"></i> Detay
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Fatima Al-Zahra</td>
+                                <td>fatima@example.com</td>
+                                <td>+970 59 987 6543</td>
+                                <td>987654321</td>
+                                <td>Khan Younis, Merkez</td>
+                                <td>Grafik Tasarım</td>
+                                <td>14.12.2024</td>
+                                <td><span class="status-pending">Beklemede</span></td>
+                                <td>
+                                    <button class="btn btn-primary" style="margin: 2px; padding: 5px 10px;" onclick="approveUser(2)">
+                                        <i class="fas fa-check"></i> Onayla
+                                    </button>
+                                    <button class="btn" style="background: var(--palestinian-red); color: white; margin: 2px; padding: 5px 10px;" onclick="rejectUser(2)">
+                                        <i class="fas fa-times"></i> Reddet
+                                    </button>
+                                    <button class="btn btn-secondary" style="margin: 2px; padding: 5px 10px;" onclick="viewDetails(2)">
+                                        <i class="fas fa-eye"></i> Detay
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>Omar Qasemi</td>
+                                <td>omar@example.com</td>
+                                <td>+970 59 555 4444</td>
+                                <td>555444333</td>
+                                <td>Rafah, Batı</td>
+                                <td>İçerik Yazarlığı</td>
+                                <td>13.12.2024</td>
+                                <td><span class="status-pending">Beklemede</span></td>
+                                <td>
+                                    <button class="btn btn-primary" style="margin: 2px; padding: 5px 10px;" onclick="approveUser(3)">
+                                        <i class="fas fa-check"></i> Onayla
+                                    </button>
+                                    <button class="btn" style="background: var(--palestinian-red); color: white; margin: 2px; padding: 5px 10px;" onclick="rejectUser(3)">
+                                        <i class="fas fa-times"></i> Reddet
+                                    </button>
+                                    <button class="btn btn-secondary" style="margin: 2px; padding: 5px 10px;" onclick="viewDetails(3)">
+                                        <i class="fas fa-eye"></i> Detay
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Recent Actions -->
+            <div class="admin-card">
+                <h3 style="color: var(--palestinian-green); margin-bottom: 1.5rem;">
+                    <i class="fas fa-history"></i> Son İşlemler
+                </h3>
+                
+                <div style="display: grid; gap: 1rem;">
+                    <div style="padding: 1rem; background: #f8f9fa; border-radius: 5px; border-right: 4px solid var(--palestinian-green);">
+                        <strong>Kullanıcı Onaylandı:</strong> Nour Al-Din (ID: 125) - 15.12.2024 14:30
+                    </div>
+                    <div style="padding: 1rem; background: #f8f9fa; border-radius: 5px; border-right: 4px solid var(--palestinian-red);">
+                        <strong>Başvuru Reddedildi:</strong> Test User (ID: 124) - 15.12.2024 14:15
+                    </div>
+                    <div style="padding: 1rem; background: #f8f9fa; border-radius: 5px; border-right: 4px solid var(--palestinian-green);">
+                        <strong>Kullanıcı Onaylandı:</strong> Layla Mahmoud (ID: 123) - 15.12.2024 13:45
+                    </div>
+                </div>
+            </div>
+
+            <!-- Verification Guidelines -->
+            <div class="admin-card">
+                <h3 style="color: var(--palestinian-black); margin-bottom: 1.5rem;">
+                    <i class="fas fa-clipboard-list"></i> Kimlik Doğrulama Rehberi
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div>
+                        <h4 style="color: var(--palestinian-green); margin-bottom: 1rem;">Onaylama Kriterleri:</h4>
+                        <ul style="color: var(--text-light);">
+                            <li>Geçerli Filistin kimlik numarası (9 hane)</li>
+                            <li>Gazze Şeridi'nde yaşayan adres bilgisi</li>
+                            <li>Tutarlı kişisel bilgiler</li>
+                            <li>Doğru telefon numarası formatı (+970)</li>
+                            <li>Gerçek e-posta adresi</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--palestinian-red); margin-bottom: 1rem;">Red Sebepleri:</h4>
+                        <ul style="color: var(--text-light);">
+                            <li>Geçersiz kimlik numarası</li>
+                            <li>Gazze dışı adres bilgisi</li>
+                            <li>Şüpheli veya sahte bilgiler</li>
+                            <li>Eksik zorunlu alanlar</li>
+                            <li>Spam veya tekrarlı başvurular</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="flag-logo">
+                        <div class="flag-stripe black"></div>
+                        <div class="flag-stripe white"></div>
+                        <div class="flag-stripe green"></div>
+                        <div class="flag-triangle red"></div>
+                    </div>
+                    <h3>Gazze Dijital Platformu</h3>
+                    <p>Filistin gençliğini dijital dünyada güçlendirmek için buradayız.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Admin Araçları</h4>
+                    <ul>
+                        <li><a href="#users">Kullanıcı Yönetimi</a></li>
+                        <li><a href="#reports">Raporlar</a></li>
+                        <li><a href="#settings">Ayarlar</a></li>
+                        <li><a href="#backup">Yedekleme</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Destek</h4>
+                    <ul>
+                        <li><a href="#">Yardım Merkezi</a></li>
+                        <li><a href="#">Admin Rehberi</a></li>
+                        <li><a href="#">Teknik Destek</a></li>
+                        <li><a href="#">Sistem Durumu</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gazze Dijital Platformu - Admin Paneli. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function approveUser(userId) {
+            if (confirm('Bu kullanıcıyı onaylamak istediğinizden emin misiniz?')) {
+                alert('Kullanıcı ID: ' + userId + ' başarıyla onaylandı!');
+                // Satırı tablodan kaldır veya durumunu güncelle
+                updateUserStatus(userId, 'approved');
+            }
+        }
+
+        function rejectUser(userId) {
+            const reason = prompt('Red sebebini girin:');
+            if (reason) {
+                alert('Kullanıcı ID: ' + userId + ' reddedildi. Sebep: ' + reason);
+                updateUserStatus(userId, 'rejected');
+            }
+        }
+
+        function viewDetails(userId) {
+            alert('Kullanıcı ID: ' + userId + ' detaylarını görüntüleme - Bu özellik yakında eklenecek');
+        }
+
+        function updateUserStatus(userId, status) {
+            // Bu fonksiyon gerçek uygulamada backend API'ye istek gönderecek
+            const row = document.querySelector(`tr:nth-child(${userId})`);
+            if (row) {
+                const statusCell = row.querySelector('.status-pending');
+                if (statusCell) {
+                    statusCell.textContent = status === 'approved' ? 'Onaylandı' : 'Reddedildi';
+                    statusCell.className = status === 'approved' ? 'status-approved' : 'status-rejected';
+                }
+            }
+        }
+
+        // Sayfa yüklendiğinde admin kontrolü
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gerçek uygulamada burada admin authentication kontrolü olacak
+            console.log('Admin paneli yüklendi');
+        });
+    </script>
+</body>
+</html> 
